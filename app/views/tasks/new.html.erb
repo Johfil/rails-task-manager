@@ -1,0 +1,29 @@
+<div class="container mt-3 mb-3">
+  <div class="d-flex justify-content-center">
+    <h2>New task :D:D:D</h2>
+  </div>
+<div class="d-flex justify-content-center">
+  <div class="d-flex flex-column align-items-center" style="height: 100vh;">
+<%= form_with(model: @task, url: tasks_path, method: :post) do |form| %>
+<div class="d-flex justify-content-center mb-3">
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+</div>
+<div class="d-flex justify-content-center mb-3">
+  <%= form.label :details %>
+  <%= form.text_field :details %>
+</div>
+<div class="d-flex justify-content-center pd-3">
+  <%= form.label :completed %>
+  <%= form.check_box :completed %>
+  </div>
+<div class="d-flex justify-content-center">
+  <%= form.submit 'Create Task', class: 'btn btn-primary mt-1' %>
+  </div>
+<% end %>
+<div class="d-flex justify-content-center">
+<%= link_to 'Back to menu', tasks_path, class: 'btn btn-primary mt-1' %>
+</div>
+</div>
+</div>
+</div>
